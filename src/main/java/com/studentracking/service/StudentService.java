@@ -41,6 +41,11 @@ public class StudentService {
 		Optional<Student> update =dao.findById(student.getId());
 		Student fi = update.get();
 		fi.setEmail(student.getEmail());
+		Student fn = update.get();
+		fn.setFirst_name(student.getFirst_name());
+		Student ln = update.get();
+		ln.setLast_name(student.getLast_name());
+		
 		
 		return dao.save(student);
 	}
